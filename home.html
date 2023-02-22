@@ -9,40 +9,46 @@
 <style>
     
     /*first Block*/
-    .block-1-img{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 20px;
-        column-gap: 10px;
-        border: 1px solid black;
-        
-    }
-    .block-1-img img{
-        block-size: 90px;
-        border: 1px solid black;
-    }
     #first-section{
         display: grid;
         grid-template-columns: repeat(4,1fr);
+        background-color: rgb(235, 234, 234);
+        row-gap: 20px;
         column-gap: 20px;
-        row-gap: 30px;
-        background-color: rgb(226, 223, 232);
-       
-        
+    }.block-1-img{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
     }
-    #landingpage{
-        background-color: rgb(226, 223, 232);
-    width: 100%;
-   
+    .block-1-img img{
+        width: 150px;
     }
     .block-1{
         background-color: white;
-        justify-content: center;
-        
+     
     }
-    .block-2-img .block-1-img{
-        margin-left: 20px;
-
+    #imggrid-1{
+        
+        padding-left: 10px;
+    }
+    #imggrid-3{
+        
+        padding-left: 10px;
+    }
+    #imggrid-5{
+        
+        padding-left: 10px;
+    }
+    #imggrid-6{
+        
+        padding-left: 20px;
+    }
+    #imggrid-7{
+        
+        padding-left: 10px;
+    }
+    #imggrid-8{
+        
+        padding-left: 15px;
     }
 
 </style>
@@ -50,25 +56,27 @@
     <div id="landingpage">
         <div id="first-section">
             <div class="block-1">
-                <h2>Amazon Pay | Limited period offers on travel tickets</h2> 
-            <div class="block-1-img">
-             <div> 
-                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Flight_186x116._SY116_CB613655434_.jpg" alt="">
-                <p>Get flat 8% off on flights</p> 
-            </div>
-             <div>
-                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Train_186x116._SY116_CB613655434_.jpg" alt="">
-               <p>Zero payment geteway charges</p> 
-            </div>
-             <div>
-                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Bus_186x116._SY116_CB613655434_.jpg" alt="">
-                <p>Gauranteed rewards on bus trips</p> 
-            </div>
-             <div>
-                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Accessory_186x116._SY116_CB613655434_.jpg" alt="">
-                <p>Product for you travel need</p> 
-            </div>
-            </div>
+                <h2>Amazon Pay | Limited period offers on travel tickets</h2> <div id="imggrid-1">
+                    <div class="block-1-img">
+                        <div> 
+                           <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Flight_186x116._SY116_CB613655434_.jpg" alt="">
+                           <p>Get flat 8% off on flights</p> 
+                       </div>
+                        <div>
+                           <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Train_186x116._SY116_CB613655434_.jpg" alt="">
+                          <p>Zero payment geteway charges</p> 
+                       </div>
+                        <div>
+                           <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Bus_186x116._SY116_CB613655434_.jpg" alt="">
+                           <p>Gauranteed rewards on bus trips</p> 
+                       </div>
+                        <div>
+                           <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/AmazonPay/Flights/Accessory_186x116._SY116_CB613655434_.jpg" alt="">
+                           <p>Product for you travel need</p> 
+                       </div>
+                       </div>
+                </div>
+            
                 <a href="">See all offers</a>
             </div>
 
@@ -80,6 +88,7 @@
 
             <div class="block-1" class="block-2-img">
                 <h2>Automotive essentials | Up to 60% off</h2> 
+                <div id="imggrid-3">
             <div class="block-1-img" >
              <div> 
                 <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/2020/GW/PCQC/Glasscare1X._SY116_CB410830553_.jpg" alt="">
@@ -98,6 +107,7 @@
                 <p>Vacuum cleaner </p> 
             </div>
             </div>
+        </div>
                 <a href="">See more</a>
             </div>
             <div id="block-4">
@@ -110,7 +120,8 @@
             </div>
 
             <div class="block-1">
-                <h2>Up to 60% off | Styles for men</h2> 
+                <h2>Up to 60% off | Styles for men</h2>
+                <div id="imggrid-5">
             <div class="block-1-img">
              <div> 
                 <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg" alt="">
@@ -129,10 +140,12 @@
                 <p>Bags & luggage</p> 
             </div>
             </div>
+        </div> 
                 <a href="">See all offers</a>
             </div>
 
             <div class="block-1" class="block-2-img"><h2>Up to 60% off | Professional tools, testing & more</h2> 
+                <div id="imggrid-6">
                 <div class="block-1-img" >
                  <div> 
                     <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Biss/2018/QC/Tools1x._SY116_CB424026090_.jpg" alt="">
@@ -151,11 +164,13 @@
                     <p>Medical supplies</p> 
                 </div>
                 </div>
+            </div>
                     <a href="">See more</a>
                 </div>
 
             <div class="block-1">
                 <h2>Upgrade your home | Amazon Brands & more</h2> 
+                <div id="imggrid-7">
                 <div class="block-1-img" class="block-2-img">
                  <div> 
                     <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/PB/PC/Gateway/QC/Mixer-186x116._SY116_CB614658577_.jpg" alt="">
@@ -174,10 +189,12 @@
                     <p> Starting ₹229 | Photo frames, clocks & more</p> 
                 </div>
                 </div>
+            </div>
                     <a href="">Shop now</a></div>
 
             <div class="block-1">
                 <h2>Starting ₹87 | Amazon Brands & more</h2> 
+                <div id="imggrid-8">
                 <div class="block-1-img" class="block-2-img">
                  <div> 
                     <img src="https://images-eu.ssl-images-amazon.com/images/G/31/home_private_label/moritika/baugwsept/xcm_banners_tile2-kitchen_186x116_in-en._SY116_CB612501062_.jpg" alt="">
@@ -196,8 +213,68 @@
                     <p>Starting ₹189 | Wall stickers & more</p> 
                 </div>
                 </div>
+            </div>
                     <a href="">Shop now</a></div>
         </div>
+    </div>
+    
+    
+    
+    <div>
+        <div id="list">
+            <div>
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li> <a href="">About Us</a> </li>
+                    <li> <a href="">Careers</a></li>
+                    <li> <a href="">Press Releases</a></li>
+                    <li> <a href="">Amazon Science</a></li>
+                   
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li> <a href="">About AirWalk</a> </li>
+                    <li> <a href="">AirWalk Purpose</a></li>
+                    <li> <a href="">Careers</a></li>
+                    <li> <a href="">Investor Relations</a></li>
+                    <li> <a href="">Custom Orders</a></li>
+                    <li> <a href="">Wholesale Inquiries
+                </a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Help</h3>
+                <ul>
+                    <li> <a href="">Order Status & Returns</a> </li>
+                    <li> <a href="">FAQs</a></li>
+                    <li> <a href="">Size Chart</a></li>
+                    <li> <a href="">Accessibility</a></li>
+                    <li> <a href="">Caring for your AirWalk</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Customer Service</h3>
+                <ul>
+                    <li> Mon </li>
+                    <li> tues-Thurs </li>
+                    <li> Fri </li>
+                    <li> Sat-Sun </li>
+                    <li> <a href="">Live Chat</a></li>
+                    <li> <a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div id="Openclose">
+                <ul>
+                    <li> Opens at 9 AM ET </li>
+                    <li> 24 Hours </li>
+                    <li> Closes at 5 PM ET</li>
+                    <li>CLOSED</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
