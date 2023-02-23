@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.bigcont {
+  width: 68%;
+}
+
+.sort-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sort-bar p span {
+  color: orange;
+}
+
+.sort-bar p:hover {
+  cursor: default;
+  color: default;
+}
+
+#sort-select {
+  margin-right: 10px;
+  border-radius: 5px;
+  height: 25px;
+  border: 1px solid rgb(180, 180, 180);
+  background-color: rgba(208, 219, 209, 0.842);
+}
+
+.results {
+  margin-top: 20px;
+}
+.results h2 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.results p {
+  margin-top: 0;
+}
+
+.delivery-day p {
+  margin: 0;
+}
+
+.category {
+  margin-top: 13px;
+  font-weight: 300;
+}
+
+.category p {
+  margin: 0;
+}
+
+.customer-review {
+  margin-top: 13px;
+  font-weight: 300;
+}
+
+.customer-review p {
+  margin: 0;
+}
+
+.brand {
+  margin-top: 13px;
+  font-weight: 300;
+}
+
+.brand p {
+  margin: 0;
+}
+
+.price {
+  margin-top: 13px;
+  font-weight: 300;
+}
+
+.price p {
+  margin: 0;
+}
+
+.deals-discounts {
+  margin-top: 13px;
+}
+
+.deals-discounts p {
+  margin: 0;
+}
+
+.delivery-day label {
+  display: flex;
+  align-items: center;
+}
+
+.delivery-day label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="checkbox"]:hover {
+  background-color: violet;
+}
+
+p:hover {
+  color: #c45539;
+  cursor: pointer;
+}
+
+.fa-solid.fa-star,
+.fa-solid.fa-star-half-stroke {
+  color: gold;
+}
+
+.brand input[type="checkbox"]:hover {
+  color: violet;
+}
+.delivery-day h5,
+.category h5,
+.customer-review h5,
+.brand h5,
+.price h5,
+.deals-discounts h5,
+.delivery-day p,
+.category p,
+.customer-review p,
+.brand p,
+.price p,
+.deals-discounts p {
+  margin: 5px 0;
+}
+
+.delivery-day h5,
+.category h5,
+.customer-review h5,
+.brand h5,
+.price h5,
+.deals-discounts h5 {
+  font-size: 18px;
+}
+
+.parentcont {
+  display: flex;
+  margin-top: 20px;
+}
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #51a4c2;
+}
+
+.product-description:hover {
+  color: orange;
+}
+
+input[type="checkbox"]:hover {
+  color: violet;
+  cursor: pointer;
+}
+
+.pagination-buttons button:nth-child(1) {
+  width: 90px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.pagination-buttons button:nth-child(2) {
+  width: 30px;
+  font-size: 18px;
+}
+.pagination-buttons button:nth-child(3) {
+  width: 30px;
+  font-size: 18px;
+}
+.pagination-buttons button:nth-child(4) {
+  width: 60px;
+  font-size: 18px;
+}
+
+.pagination-buttons button:hover {
+  background-color: violet;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+  margin-left: 230px;
+  margin-right: 100px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #fcfcfc;
+}
+
+.product-card img {
+  max-width: 90%;
+  max-height: 55%;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-card p {
+  margin: 10px;
+  font-size: 16px;
+  color: #777;
+}
+
+.product-card .rating {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.product-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px;
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    width: 100%;
+  }
+}
+#contact {
+  margin-top: 50px;
+  font-size: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+#contact:hover {
+  color: #c45539;
+  cursor: pointer;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+.wrapper {
+  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wrapper .icon {
+  margin: 0 5px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i {
+  line-height: 60px;
+  font-size: 25px;
+}
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.icon .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover span {
+  color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before {
+  background: #3b5999;
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip:before {
+  background: #46c1f6;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before {
+  background: #e1306c;
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before {
+  background: #333;
+}
