@@ -5,21 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
     <link rel="stylesheet" href="products.css" />
+    <script
+      src="https://kit.fontawesome.com/5c4293abd6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="sort-bar">
-      <p>sort</p>
+      <p>1-2 of over 24 results for <span>Products</span></p>
+      <select id="sort-select">
+        <option value="featured">Sort by: Featured</option>
+        <option value="priceLowToHigh">Price: Low to High</option>
+        <option value="priceHighToLow">Price: High to Low</option>
+      </select>
     </div>
 
     <div class="results">
       <h2>RESULTS</h2>
-      <p>Price and other details may vary based on product size and colour.</p>
+      <p>Price and other details may vary based on product size and color.</p>
     </div>
+    <hr />
+
+    <div class="bigcont">
+      <div class="delivery-day">
+        <h5>Delivery Day</h5>
+        <label><input type="checkbox" />Get It by Tomorrow</label>
+        <label style="display: inline-block"
+          ><input type="checkbox" />Get It in 2 Days</label
+        >
+      </div>
+
+      <div class="category">
+        <h5>Category</h5>
+        <p>Laptops & Accesories</p>
+        <p>Clothes</p>
+        <p>Electronics & Equipments</p>
+        <p>Shoes & Laces</p>
+        <p>Furnitures</p>
+      </div>
+
+      <div class="customer-review">
+        <h5>Customer Review</h5>
+        <div class="first-star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <div class="second-star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div class="third-star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div class="fourth-star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+      </div>
+
+      <div class="brand">
+        <h5>Brands</h5>
+        <input type="checkbox" name="brand" value="Atom" />ATOM<br />
+        <input
+          type="checkbox"
+          name="brand"
+          value="Electronic Spices"
+        />Electronics & Equipments<br />
+        <input type="checkbox" name="brand" value="boat" />boat<br />
+        <input type="checkbox" name="brand" value="Samsung" />Samsung<br />
+      </div>
+
+      <div class="price">
+        <h5>Price</h5>
+        <p>Under ₹1,000</p>
+        <p>₹1,000 - ₹5,000</p>
+        <p>₹5,000 - ₹10,000</p>
+        <p>₹10,000 - ₹20,000</p>
+        <p>Over ₹20,000</p>
+      </div>
+
+      <div class="deals-discounts">
+        <h5>Deals & Discounts</h5>
+        <p>Today's Deals</p>
+      </div>
+    </div>
+
+    <div class="products-container"></div>
+    <div class="pagination-buttons">
+      <button class="previous-page">Previous</button>
+      <button class="one">1</button>
+      <button class="two">2</button>
+      <button class="next-page">Next</button>
+    </div>
+
+    <div id="contact">
+      <h6>Contact Us</h6>
+    </div>
+
     <script src="products.js"></script>
   </body>
 </html>

@@ -6,110 +6,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <style>
-        .container{
-            width: 100%;
-            height: 100vh;
-            background-position: center;
-            background-size: cover;
-            position: relative;
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        .form-box{
-            width: 90%;
-            max-width: 450px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            background: #FFB74D;
-            padding:50px 60px 70px;
-            text-align: center;
-            border-radius:10px;
-        }
-        .form-box h1{
-            font-size: 30px;
-            margin-bottom: 60px;
-            color: black;
-            position: relative;
-        }
-        .form-box h1::after{
-            content: '';
-            width: 30px;
-            height: 4px;
-            border-radius: 3px;
-            background: black;
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translate(-50%);
-        }
-        .input-field{
-            background: #eaeaea;
-            margin: 15px 0;
-            border-radius: 3px;
+        .logo{
             display: flex;
+            justify-content: center;
             align-items: center;
         }
-        input{
-            width: 100%;
-            background: transparent;
-            border: 0;
-            outline: 0;
-            padding: 18px 15px ;
-            
+        .logo img{
+            width: 115px;
+            height: 30px;
+            margin-top: 15px;
         }
-        .input-field #submit{
-            background:#FF9800 ;
-            color: white;
-           
+        .logo span{
+            margin-top: 30px;
+            font-size: 14px;
         }
-        .input-grp{
-            height: 280px;
+        .card{
+            width: 296px;
+            height: auto;
+            padding: 20px 26px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px auto 25px auto;
+        }
+        .class{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        .class #enroll{
+            margin-top: 20px;
+        }
+        .card h1{
+            font-weight: 400;
+            font-size: 28px;
+        }
+        .card label{
+            font-family: 13px;
+            padding-left: 2px;
+            font-weight: 550;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .card input{
+            width: 272px;
+            height: 25px;
+            padding: 3px 7px;
+            margin-top: 5px;
+            background-color: #fff;
+            border: 1px solid #a6a6a6;
+            border-radius: 3px;
+        }
+        .card button{
+            width: 288px;
+            height: 31px;
+            margin-top: 10px;
+            background-color: #f0c14b;
+            border: 1px solid #a6a6a6;
+            border-top-color: #949494;
+            background-image: linear-gradient(#f7da90,#e2b33b);
+            border-radius: 3px;
+        }
+        .breck::after{
+            content: '';
+            position: relative;
+            top: 5px;
+            display: inline-block;
+            width: 150px;
+            margin-left: 70px;
+            border-top: 1px solid #e7e7e7;
+        }
+        .card p, .card p a{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        a{
+            text-decoration: none;
+            color: #0066c0;
+        }
+        .card a{
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .card #signin{
+            margin-top: 20px;
+        }
+        .card #condition{
+            margin-top: 20px;
+        }
+        .icon::after{
+            display: inline-block;
+            content: '';
+            border-top: 4px solid transparent;
+            border-left:4px solid #0066c0;
+            border-bottom: 4px solid transparent;
+            margin-left: 5px;
+        }
+        footer .links{
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+            margin: 25px auto 15px auto;
+        }
+        footer .links a{
+            font-size: 12px;
+        }
+        footer::before{
+            content: '';
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            margin: auto;
+            height: 44px;
+            margin-top: -50px;
+            border-top: 1px solid transparent;
+            box-shadow: 0 10px 15px -20px #333;
+        }
+        footer p{
+            font-size: 11px;
+            color: #555;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="form-box">
-            <h1 id="title">Sign up</h1>
-
-            <form>
-                <div class="input-grp">
-                    <div class="input-field" id="namefield">
-                        <input type="text" placeholder="Name" id="name">
-                    </div>
-                    <div class="input-field">
-                        <input type="email" placeholder="Email" id="email">
-                    </div>
-                    <div class="input-field">
-                        <input type="password" placeholder="Password" id="password">
-                    </div>
-                    <div class="input-field">
-                        <input type="submit" id="submit" placeholder="submit">
-                    </div>
-                    <p>You Already have an account? <a href="./Login.html">Login here</a></p>
-                </div>
-            </form>
-            
+    <section>
+        <div class="logo">
+            <img src="./logo .jpg" alt="error">
+            <span>.in</span>
         </div>
-        
-    </div>
+        <div class="card">
+            <h1>Create Account</h1>
+            <div class="class">
+                <label for="">Your name</label>
+                <input type="text" placeholder="First and last name" id="name">
+                <label for="">Mobile number</label>
+                <input type="text" placeholder="Mobile number" id="number">
+                <label for="">Email</label>
+                <input type="email" id="email">
+                <label for="">Password</label>
+                <input type="password" id="password">
+                <p>Passwords must be at least 6 characters.</p>
+                <p id="enroll">By enrolling your mobile phone number, you consent to receive automated security notifications via text message from Amazon. Message and data rates may apply.</p>
+                <button id="submit">Continue</button>
+            </div>
+            <div class="breck"></div>
+            <p id="signin">Already have an account? <a href="./Login.html" class="icon">Sign in</a></p>
+            <p>Buying for work? <a href="#" class="icon">Create a free business account</a></p>
+            <p id="condition">By creating an account or logging in, you agree to Amazon’s <a href="#">Conditions of Use</a> and <a href="#">Privacy Policy</a>.</p>
+        </div>
+        <footer>
+            <div class="links">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Help</a>
+            </div>
+            <p>© 1996-2023, Junglebuy.com, Inc. or its affiliates</p>
+        </footer>
+    </section>
     <script>
-        let form=document.querySelector("form")
-        form.addEventListener("submit",(event)=>{
+        let form=document.getElementById("submit")
+        form.addEventListener("click",(event)=>{
             event.preventDefault()
             let name=document.getElementById("name")
+            let number=document.getElementById("number")
             let email=document.getElementById("email")
             let password=document.getElementById("password")
 
             let obj={
                 name:name.value,
+                number:number.value,
                 email:email.value,
                 password:password.value
             }
+            alert("Click Signin")
             let tabledata=JSON.parse(localStorage.getItem("login"))||[]
             tabledata.push(obj)
             localStorage.setItem("login",JSON.stringify(tabledata))
-            window.location.href="./Login.html"
+            // window.location.href="./Login.html"
+            
         })  
     </script>
 </body>
