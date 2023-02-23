@@ -206,9 +206,6 @@
             }if(password==""){
                 errorpassword.innerText="please enter the password"
                 return false
-            }else if(password.length<6){
-                errorpassword.innerText="passwor should contains atleast 6 character"
-                return false
             }
             function signin(data){
                 data.forEach((el,i)=>{

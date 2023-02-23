@@ -199,9 +199,8 @@
             }
             
             
-            let tabledata=JSON.parse(localStorage.getItem("login"))||[]
+            let tabledata=[]
             tabledata.push(obj)
-            let data=tabledata
             tabledata.forEach((ele,ind)=>{
                 if(ele.name==""){
                     nameerror.innerText="Please enter your name"
@@ -223,9 +222,10 @@
                 }
                 else{
                     alert("Click Signin")
+                    localStorage.setItem("login",JSON.stringify(tabledata))
                 }
             })
-            localStorage.setItem("login",JSON.stringify(tabledata))
+            
             // window.location.href="./Login.html"
             
             
