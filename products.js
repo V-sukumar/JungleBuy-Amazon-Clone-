@@ -8,14 +8,18 @@ let currentPage = 1;
 let productsPerPage = 12;
 let totalPages = 2;
 let productsData = [];
+function fetchProductsData(url) {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      productsData = data;
+      renderPage(currentPage);
+    })
+    .catch((error) => console.error(error));
+}
 
-fetch("https://63c812db075b3f3a91d99323.mockapi.io/Clothes")
-  .then((response) => response.json())
-  .then((data) => {
-    productsData = data;
-    renderPage(currentPage);
-  })
-  .catch((error) => console.error(error));
+fetchProductsData("https://63c812db075b3f3a91d99323.mockapi.io/Clothes");
+
 
 function renderPage(page) {
   productsContainer.innerHTML = "";
@@ -36,10 +40,16 @@ function renderPage(page) {
 
     let name = document.createElement("h3");
     name.textContent = product.Title;
-    card.appendChild(name);
+    name.classList.add("product-title");
+    let anchor = document.createElement("a");
+    anchor.href = "productsdetails.html";
+    anchor.appendChild(name);
+    card.appendChild(anchor);
 
     let description = document.createElement("p");
     description.textContent = product.Description;
+    description.classList.add("product-description");
+
     card.appendChild(description);
 
     let rating = document.createElement("div");
