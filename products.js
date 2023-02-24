@@ -4,6 +4,9 @@ let nextBtn = document.querySelector(".next-page");
 let pageOneBtn = document.querySelector(".one");
 let pageTwoBtn = document.querySelector(".two");
 
+//variable for cut throught price 
+let originalPrice = 0;
+
 let currentPage = 1;
 let productsPerPage = 12;
 let totalPages = 2;
@@ -65,8 +68,12 @@ function renderPage(page) {
     card.appendChild(rating);
 
     let price = document.createElement("p");
+    let originalP = document.createElement("span");
+    // originalP.innerText = `₹${parseInt(product.Price)-parseInt(product.Price/0.2)}`
+    // console.log(originalP);
     price.textContent = `₹${product.Price}` + `(20% off)`;
     card.appendChild(price);
+    // card.appendChild(originalP);
 
     productsContainer.appendChild(card);
   });
