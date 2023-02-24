@@ -40,7 +40,7 @@ body{
   }
   
   .addressDiv {
-    /* font-family: " EAmazonmber"; */
+   
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -89,7 +89,7 @@ body{
     width: 40px;
   }
   .loginUserDiv {
-    /* font-family: "Amazon Ember"; */
+  
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -97,14 +97,16 @@ body{
     color: #ffffff;
   }
   .returnAndOrdersDiv {
-    /* font-family: "Amazon Ember"; */
+    
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #ffffff;
   }
- 
+
+  
+
   .header2 {
     display: flex;
     background: #232f3f;
@@ -118,7 +120,7 @@ body{
   }
   .headerLinks li {
     padding: 5px 10px;
-    /* font-family: "Amazon Ember"; */
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
