@@ -351,43 +351,69 @@ img {
 }
 
 .inside-box {
-  margin-top: 120px;
+  margin-top: 50px;
+  margin-left: 20px;
 }
 
 .manufacturer {
   margin-top: 30px;
+  margin-left: 20px;
+}
+.manufacturer h2{
+  margin: 10px auto;
 }
 
 .manufacturer img {
-  width: 50%;
+  /* width: 50%; */
   align-items: center;
   justify-content: center;
 }
 
 .s-row {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  gap: 10px;
   margin-top: 10px;
   width: 60%;
 }
-
+.s-row div{
+  width: 32%;
+  padding: 10px;
+}
+.s-row p{
+  font-size: 13px;
+}
+.s2-row p{
+  font-size: 13px;
+}
+.s3-row p{
+  font-size: 13px;
+}
 .s2-row {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
+  gap: 10px;
   margin-top: 10px;
   width: 60%;
 }
-
+.s2-row div{
+  width: 32%;
+  padding: 10px;
+}
 .s3-row {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  padding: 10px;
   justify-content: center;
   margin-top: 10px;
   width: 60%;
 }
-
+.s3-row div{
+  width: 32%;
+  padding: 10px;
+}
 .footer {
   width: 100%;
   height: 490px;
@@ -460,7 +486,9 @@ img {
   width: 100%;
   background-color: rgb(172, 172, 172);
 }
-
+.blackText{
+  color: black;
+}
 
 @media screen and (min-width: 992px) {
   .card {
@@ -469,7 +497,7 @@ img {
     grid-gap: 1.5rem;
   }
   .card-wrapper {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
