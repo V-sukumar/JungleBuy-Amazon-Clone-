@@ -125,17 +125,14 @@
   order: 1;
   flex-grow: 0;
 }
-.hamburgerLi img{
+.hamburgerLi img {
   margin-right: 4px;
 }
 
 /* header end */
 
-
-
 .bigcont {
   width: 68%;
-
 }
 
 .sort-bar {
@@ -340,7 +337,6 @@ input[type="checkbox"]:hover {
   border: 1px solid #fcfcfc;
   padding: 10px;
   border-radius: 5px;
-
 }
 
 .product-card img {
