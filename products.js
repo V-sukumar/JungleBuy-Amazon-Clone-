@@ -15,8 +15,9 @@ function fetchProductsData(url) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      productsData = data;
+      productsData=data
       renderPage(currentPage);
+     console.log(data)
     })
     .catch((error) => console.error(error));
 }

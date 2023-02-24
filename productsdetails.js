@@ -21,3 +21,6 @@ function slideImage() {
 }
 
 window.addEventListener("resize", slideImage);
+
+
+
