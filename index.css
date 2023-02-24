@@ -21,7 +21,7 @@ body{
     display: flex;
     background: #141920;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,10 +37,13 @@ body{
   .leftHeader {
     display: flex;
     align-items: center;
+    
   }
-  
+  .leftHeader div{
+    border: 1px solid transparent;
+  }
   .addressDiv {
-    /* font-family: " EAmazonmber"; */
+   
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -56,10 +59,10 @@ body{
     border-radius: 20px;
     display: flex;
     align-items: center;
-    height: 30px;
+    height: 40px;
   }
   .middleHeaderSearch input {
-    height: 30px;
+    height: 100%;
     width: 700px;
     border: none;
     /* width: 50%; */
@@ -85,11 +88,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
+    height: 100%;
     width: 40px;
   }
   .loginUserDiv {
-    /* font-family: "Amazon Ember"; */
+  
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -97,19 +100,21 @@ body{
     color: #ffffff;
   }
   .returnAndOrdersDiv {
-    /* font-family: "Amazon Ember"; */
+    
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #ffffff;
   }
- 
+
+  
+
   .header2 {
     display: flex;
     background: #232f3f;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 30px;
+    height: 38px;
     display: flex;
     align-items: center;
   }
@@ -118,7 +123,7 @@ body{
   }
   .headerLinks li {
     padding: 5px 10px;
-    /* font-family: "Amazon Ember"; */
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -129,6 +134,11 @@ body{
     /* flex: none; */
     order: 1;
     flex-grow: 0;
+    border: 1px solid transparent;
+  }
+  .headerLinks li:hover{
+    border: 1px solid white;
+    border-radius: 2px;
   }
   .hamburgerLi img{
     margin-right: 4px;
