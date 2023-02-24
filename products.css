@@ -7,6 +7,7 @@
 
 .bigcont {
   width: 68%;
+
 }
 
 .sort-bar {
@@ -144,11 +145,11 @@ p:hover {
 .deals-discounts h5 {
   font-size: 18px;
 }
-
 .parentcont {
   display: flex;
   margin-top: 20px;
 }
+
 .pagination-buttons {
   display: flex;
   justify-content: center;
@@ -169,7 +170,6 @@ input[type="checkbox"]:hover {
   color: violet;
   cursor: pointer;
 }
-
 .pagination-buttons button:nth-child(1) {
   width: 90px;
   height: 30px;
@@ -209,6 +209,7 @@ input[type="checkbox"]:hover {
   justify-content: center;
   text-align: center;
   border: 1px solid #fcfcfc;
+
 }
 
 .product-card img {
@@ -358,3 +359,4 @@ input[type="checkbox"]:hover {
 .wrapper .github:hover .tooltip:before {
   background: #333;
 }
+
