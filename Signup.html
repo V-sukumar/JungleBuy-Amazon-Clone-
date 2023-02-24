@@ -1,235 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up</title>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .logo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .logo img{
-            width: 115px;
-            height: 30px;
-            margin-top: 15px;
-        }
-        .logo span{
-            margin-top: 30px;
-            font-size: 14px;
-        }
-        .card{
-            width: 296px;
-            height: auto;
-            padding: 20px 26px;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin: 20px auto 25px auto;
-        }
-        .class{
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column;
-        }
-        .class #enroll{
-            margin-top: 20px;
-        }
-        .class>#nameerr,#numerr,#error,#error2{
-            color: red;
-        }
-        .card h1{
-            font-weight: 400;
-            font-size: 28px;
-        }
-        .card label{
-            font-family: 13px;
-            padding-left: 2px;
-            font-weight: 550;
-            font-size: 15px;
-            margin-top: 10px;
-        }
-        .card input{
-            width: 272px;
-            height: 25px;
-            padding: 3px 7px;
-            margin-top: 5px;
-            background-color: #fff;
-            border: 1px solid #a6a6a6;
-            border-radius: 3px;
-        }
-        .card button{
-            width: 288px;
-            height: 31px;
-            margin-top: 10px;
-            background-color: #f0c14b;
-            border: 1px solid #a6a6a6;
-            border-top-color: #949494;
-            background-image: linear-gradient(#f7da90,#e2b33b);
-            border-radius: 3px;
-        }
-        .breck::after{
-            content: '';
-            position: relative;
-            top: 5px;
-            display: inline-block;
-            width: 150px;
-            margin-left: 70px;
-            border-top: 1px solid #e7e7e7;
-        }
-        .card p, .card p a{
-            font-size: 12px;
-            line-height: 1.5;
-        }
-        a{
-            text-decoration: none;
-            color: #0066c0;
-        }
-        .card a{
-            margin-top: 10px;
-            font-size: 13px;
-        }
-        .card #signin{
-            margin-top: 20px;
-        }
-        .card #condition{
-            margin-top: 20px;
-        }
-        .icon::after{
-            display: inline-block;
-            content: '';
-            border-top: 4px solid transparent;
-            border-left:4px solid #0066c0;
-            border-bottom: 4px solid transparent;
-            margin-left: 5px;
-        }
-        footer .links{
-            display: flex;
-            justify-content: space-between;
-            width: 250px;
-            margin: 25px auto 15px auto;
-        }
-        footer .links a{
-            font-size: 12px;
-        }
-        footer::before{
-            content: '';
-            display: flex;
-            justify-content: center;
-            width: 80%;
-            margin: auto;
-            height: 44px;
-            margin-top: -50px;
-            border-top: 1px solid transparent;
-            box-shadow: 0 10px 15px -20px #333;
-        }
-        footer p{
-            font-size: 11px;
-            color: #555;
-            text-align: center;
-        }
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo img {
+        width: 115px;
+        height: 30px;
+        margin-top: 15px;
+      }
+      .logo span {
+        margin-top: 30px;
+        font-size: 14px;
+      }
+      .card {
+        width: 296px;
+        height: auto;
+        padding: 20px 26px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin: 20px auto 25px auto;
+      }
+      .class {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .class #enroll {
+        margin-top: 20px;
+      }
+      .class > #nameerr,
+      #numerr,
+      #error,
+      #error2 {
+        color: red;
+      }
+      .card h1 {
+        font-weight: 400;
+        font-size: 28px;
+      }
+      .card label {
+        font-family: 13px;
+        padding-left: 2px;
+        font-weight: 550;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      .card input {
+        width: 272px;
+        height: 25px;
+        padding: 3px 7px;
+        margin-top: 5px;
+        background-color: #fff;
+        border: 1px solid #a6a6a6;
+        border-radius: 3px;
+      }
+      .card button {
+        width: 288px;
+        height: 31px;
+        margin-top: 10px;
+        background-color: #f0c14b;
+        border: 1px solid #a6a6a6;
+        border-top-color: #949494;
+        background-image: linear-gradient(#f7da90, #e2b33b);
+        border-radius: 3px;
+      }
+      .breck::after {
+        content: "";
+        position: relative;
+        top: 5px;
+        display: inline-block;
+        width: 150px;
+        margin-left: 70px;
+        border-top: 1px solid #e7e7e7;
+      }
+      .card p,
+      .card p a {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: none;
+        color: #0066c0;
+      }
+      .card a {
+        margin-top: 10px;
+        font-size: 13px;
+      }
+      .card #signin {
+        margin-top: 20px;
+      }
+      .card #condition {
+        margin-top: 20px;
+      }
+      .icon::after {
+        display: inline-block;
+        content: "";
+        border-top: 4px solid transparent;
+        border-left: 4px solid #0066c0;
+        border-bottom: 4px solid transparent;
+        margin-left: 5px;
+      }
+      footer .links {
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        margin: 25px auto 15px auto;
+      }
+      footer .links a {
+        font-size: 12px;
+      }
+      footer::before {
+        content: "";
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+        height: 44px;
+        margin-top: -50px;
+        border-top: 1px solid transparent;
+        box-shadow: 0 10px 15px -20px #333;
+      }
+      footer p {
+        font-size: 11px;
+        color: #555;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        <div class="logo">
-            <img src="./images/logo .jpg" alt="error">
-            <span>.in</span>
+      <div class="logo">
+        <img src="./images/logo .jpg" alt="error" />
+        <span>.in</span>
+      </div>
+      <div class="card">
+        <h1>Create Account</h1>
+        <div class="class">
+          <label for="">Your name</label>
+          <input type="text" placeholder="First and last name" id="name" />
+          <p id="nameerr"></p>
+          <label for="">Mobile number</label>
+          <input type="text" placeholder="Mobile number" id="number" />
+          <p id="numerr"></p>
+          <label for="">Email</label>
+          <input type="email" id="email" />
+          <p id="error"></p>
+          <label for="">Password</label>
+          <input type="password" id="password" />
+          <p id="error2"></p>
+          <p>Passwords must be at least 6 characters.</p>
+          <p id="enroll">
+            By enrolling your mobile phone number, you consent to receive
+            automated security notifications via text message from Amazon.
+            Message and data rates may apply.
+          </p>
+          <button id="submit">Continue</button>
         </div>
-        <div class="card">
-            <h1>Create Account</h1>
-            <div class="class">
-                <label for="">Your name</label>
-                <input type="text" placeholder="First and last name" id="name">
-                <p id="nameerr"></p>
-                <label for="">Mobile number</label>
-                <input type="text" placeholder="Mobile number" id="number">
-                <p id="numerr"></p>
-                <label for="">Email</label>
-                <input type="email" id="email">
-                <p id="error"></p>
-                <label for="">Password</label>
-                <input type="password" id="password">
-                <p id="error2"></p>
-                <p>Passwords must be at least 6 characters.</p>
-                <p id="enroll">By enrolling your mobile phone number, you consent to receive automated security notifications via text message from Amazon. Message and data rates may apply.</p>
-                <button id="submit">Continue</button>
-            </div>
-            <div class="breck"></div>
-            <p id="signin">Already have an account? <a href="./Login.html" class="icon">Sign in</a></p>
-            <p>Buying for work? <a href="#" class="icon">Create a free business account</a></p>
-            <p id="condition">By creating an account or logging in, you agree to Amazon’s <a href="#">Conditions of Use</a> and <a href="#">Privacy Policy</a>.</p>
+        <div class="breck"></div>
+        <p id="signin">
+          Already have an account?
+          <a href="./Login.html" class="icon">Sign in</a>
+        </p>
+        <p>
+          Buying for work?
+          <a href="#" class="icon">Create a free business account</a>
+        </p>
+        <p id="condition">
+          By creating an account or logging in, you agree to Amazon’s
+          <a href="#">Conditions of Use</a> and <a href="#">Privacy Policy</a>.
+        </p>
+      </div>
+      <footer>
+        <div class="links">
+          <a href="#">Conditions of Use</a>
+          <a href="#">Privacy Notice</a>
+          <a href="#">Help</a>
         </div>
-        <footer>
-            <div class="links">
-                <a href="#">Conditions of Use</a>
-                <a href="#">Privacy Notice</a>
-                <a href="#">Help</a>
-            </div>
-            <p>© 1996-2023, Junglebuy.com, Inc. or its affiliates</p>
-        </footer>
+        <p>© 1996-2023, Junglebuy.com, Inc. or its affiliates</p>
+      </footer>
     </section>
     <script>
-        let form=document.getElementById("submit")
-        form.addEventListener("click",(event)=>{
-            event.preventDefault()
-            let name=document.getElementById("name")
-            let number=document.getElementById("number")
-            let email=document.getElementById("email")
-            let password=document.getElementById("password")
-            let error=document.getElementById("error")
-            let errorpassword=document.getElementById("error2")
-            let nameerror=document.getElementById("nameerr")
-            let numerror=document.getElementById("numerr")
-            
-            let obj={
-                name:name.value,
-                number:number.value,
-                email:email.value,
-                password:password.value
-            }
-            
-            
-            let tabledata=[]
-            tabledata.push(obj)
-            tabledata.forEach((ele,ind)=>{
-                if(ele.name==""){
-                    nameerror.innerText="Please enter your name"
-                    return false
-                }
-                if(ele.number==""){
-                    numerror.innerText="Please enter your mobile number"
-                    return false
-                }
-                if(ele.email==""){
-                    error.innerText="Please enter your email"
-                    return false
-                }if(ele.password==""){
-                    errorpassword.innerText="please enter the password"
-                    return false
-                }else if(ele.password.length<6){
-                    errorpassword.innerText="passwor should contains atleast 6 character"
-                    return false
-                }
-                else{
-                    alert("Click Signin")
-                    localStorage.setItem("login",JSON.stringify(tabledata))
-                }
-            })
-            
-            // window.location.href="./Login.html"
-            
-            
-        })  
+      let form = document.getElementById("submit");
+      form.addEventListener("click", (event) => {
+        event.preventDefault();
+        let name = document.getElementById("name");
+        let number = document.getElementById("number");
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let error = document.getElementById("error");
+        let errorpassword = document.getElementById("error2");
+        let nameerror = document.getElementById("nameerr");
+        let numerror = document.getElementById("numerr");
+
+        let obj = {
+          name: name.value,
+          number: number.value,
+          email: email.value,
+          password: password.value,
+        };
+
+        let tabledata = [];
+        tabledata.push(obj);
+        tabledata.forEach((ele, ind) => {
+          if (ele.name == "") {
+            nameerror.innerText = "Please enter your name";
+            return false;
+          }
+          if (ele.number == "") {
+            numerror.innerText = "Please enter your mobile number";
+            return false;
+          }
+          if (ele.email == "") {
+            error.innerText = "Please enter your email";
+            return false;
+          }
+          if (ele.password == "") {
+            errorpassword.innerText = "please enter the password";
+            return false;
+          } else if (ele.password.length < 6) {
+            errorpassword.innerText =
+              "passwor should contains atleast 6 character";
+            return false;
+          } else {
+            alert("Click Signin");
+            localStorage.setItem("login", JSON.stringify(tabledata));
+          }
+        });
+
+        // window.location.href="./Login.html"
+      });
     </script>
-</body>
+  </body>
 </html>
