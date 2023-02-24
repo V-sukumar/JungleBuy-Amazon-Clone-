@@ -41,6 +41,9 @@
             justify-content: space-around;
             flex-direction: column;
         }
+        .class p{
+            color: red;
+        }
         .card h1{
             font-weight: 400;
             font-size: 28px;
@@ -152,7 +155,7 @@
 <body>
     <section>
         <div class="logo">
-            <img src="./logo .jpg" alt="error">
+            <img src="./images/logo .jpg" alt="error">
             <span>.in</span>
         </div>
         <div class="card">
@@ -160,8 +163,10 @@
             <div class="class">
                 <label for="">Email</label>
                 <input type="text" id="email">
+                <p id="error"></p>
                 <label for="">Password</label>
                 <input type="password" id="password">
+                <p id="error2"></p>
                 <button id="submit">Continue</button>
             </div>
             <p>By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
@@ -189,10 +194,19 @@
         })
         let data=JSON.parse(localStorage.getItem("login"));
         let form=document.getElementById("submit");
+        let error=document.getElementById("error")
+        let errorpassword=document.getElementById("error2")
         form.addEventListener("click",(event)=>{
             event.preventDefault();
             let email=document.getElementById("email").value;
             let password=document.getElementById("password").value;
+            if(email==""){
+                error.innerText="Please enter your email"
+                return false
+            }if(password==""){
+                errorpassword.innerText="please enter the password"
+                return false
+            }
             function signin(data){
                 data.forEach((el,i)=>{
                     if(el.email==email && el.password==password){
