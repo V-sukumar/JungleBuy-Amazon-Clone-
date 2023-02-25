@@ -4,7 +4,7 @@ let nextBtn = document.querySelector(".next-page");
 let pageOneBtn = document.querySelector(".one");
 let pageTwoBtn = document.querySelector(".two");
 
-//variable for cut throught price 
+//variable for cut throught price
 let originalPrice = 0;
 
 let currentPage = 1;
@@ -23,7 +23,6 @@ function fetchProductsData(url) {
 }
 
 fetchProductsData("https://63c812db075b3f3a91d99323.mockapi.io/Clothes");
-
 
 function renderPage(page) {
   productsContainer.innerHTML = "";

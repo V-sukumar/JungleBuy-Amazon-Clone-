@@ -125,12 +125,9 @@
   order: 1;
   flex-grow: 0;
 }
-.hamburgerLi img{
+.hamburgerLi img {
   margin-right: 4px;
 }
-
-
-
 
 body {
   line-height: 1.5;
@@ -271,15 +268,17 @@ img {
 .purchase-info .btn {
   cursor: pointer;
   color: #fff;
+  transition: background-color 0.4s ease-in-out;
 }
 .purchase-info .btn:first-of-type {
   background: #256eff;
 }
 .purchase-info .btn:last-of-type {
-  background: #f64749;
+  background: #3bc3f5;
 }
 .purchase-info .btn:hover {
   opacity: 0.9;
+  background-color: #f64749;
 }
 .social-links {
   display: flex;
@@ -301,7 +300,7 @@ img {
   transition: all 0.5s ease;
 }
 .social-links a:hover {
-  background: #000;
+  background: #f500b4;
   border-color: transparent;
   color: #fff;
 }
@@ -319,6 +318,11 @@ img {
   border: 1px solid rgb(244, 198, 112);
   cursor: pointer;
   background-color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.size button:hover {
+  background-color: #ff25b6;
 }
 
 .style-name {
@@ -335,6 +339,11 @@ img {
   font-weight: 500;
   cursor: pointer;
   background-color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.style-name button:hover {
+  background-color: #ff25b6;
 }
 
 .pattern-name {
@@ -359,14 +368,17 @@ img {
   margin-top: 30px;
   margin-left: 20px;
 }
-.manufacturer h2{
+.manufacturer h2 {
   margin: 10px auto;
 }
 
 .manufacturer img {
-  /* width: 50%; */
-  align-items: center;
-  justify-content: center;
+  width: 70%;
+  margin: auto;
+}
+
+li {
+  color: #575757;
 }
 
 .s-row {
@@ -374,20 +386,21 @@ img {
   /* align-items: center; */
   justify-content: center;
   gap: 10px;
+  margin: auto;
   margin-top: 10px;
   width: 60%;
 }
-.s-row div{
+.s-row div {
   width: 32%;
   padding: 10px;
 }
-.s-row p{
+.s-row p {
   font-size: 13px;
 }
-.s2-row p{
+.s2-row p {
   font-size: 13px;
 }
-.s3-row p{
+.s3-row p {
   font-size: 13px;
 }
 .s2-row {
@@ -396,9 +409,10 @@ img {
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
+  margin: auto;
   width: 60%;
 }
-.s2-row div{
+.s2-row div {
   width: 32%;
   padding: 10px;
 }
@@ -408,9 +422,10 @@ img {
   padding: 10px;
   justify-content: center;
   margin-top: 10px;
+  margin: auto;
   width: 60%;
 }
-.s3-row div{
+.s3-row div {
   width: 32%;
   padding: 10px;
 }
@@ -486,7 +501,7 @@ img {
   width: 100%;
   background-color: rgb(172, 172, 172);
 }
-.blackText{
+.blackText {
   color: black;
 }
 
