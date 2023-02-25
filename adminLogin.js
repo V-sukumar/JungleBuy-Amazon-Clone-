@@ -14,33 +14,35 @@ loginBtn.addEventListener("click", (event) => {
   } else if (password == "") {
     alert("Fill the password.");
   } else {
-      fetch("https://63c822925c0760f69ac60c18.mockapi.io/users", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
-      })
-        .then((response) => {
-          console.log(response);
-          if (response.ok) {
-            alert("LOGIN - SUCCESSFUL");
-            setTimeout(() => {
-              window.location.href = "admin.html";
-            }, 500);
-          } else {
-            alert("Failed to login. Please try again.");
-            emailInput.value = "";
-            passwordInput.value = "";
-          }
-        })
-        .catch((error) => {
+    let obj = {
+      email,
+      password
+    }
+    // console.log(obj)
+    fetch("https://63c812db075b3f3a91d99323.mockapi.io/adminusers", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((response) => {
+        console.log(response);
+        if (response.ok) {
+          alert("LOGIN - SUCCESSFUL");
+          setTimeout(() => {
+            // window.location.href = "admin.html";
+          }, 500);
+        } else {
           alert("Failed to login. Please try again.");
           emailInput.value = "";
           passwordInput.value = "";
-        });
+        }
+      })
+      .catch((error) => {
+        alert("Failed to login. Please try again. API Error occured");
+        emailInput.value = "";
+        passwordInput.value = "";
+      });
   }
 });
