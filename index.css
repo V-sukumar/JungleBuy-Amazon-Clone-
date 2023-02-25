@@ -32,7 +32,13 @@ body {
   margin-left: 15px;
   /* color: invert; */
 }
-
+.logoDiv{
+  padding: 5px;
+}
+.logoDiv:hover{
+  border: 1px solid white;
+  border-radius: 2px;
+}
 .leftHeader {
   display: flex;
   align-items: center;
@@ -45,14 +51,19 @@ body {
 .addressDiv p:first-child {
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #cacaca;
   margin-left: 20px;
 }
-
+.addressDiv{
+  padding: 5px;
+}
 /* changed this code */
-
+.addressDiv:hover{
+  border: 1px solid white;
+  border-radius: 2px;
+}
 .address2 {
   font-size: 14px;
   color: white;
@@ -85,6 +96,9 @@ body {
   border: none;
   gap: 3px;
 }
+.middleHeaderSearch input::placeholder{
+  padding-left: 10px;
+}
 .searchIconDiv {
   background: #f4bf76;
   border-radius: 0px 4px 4px 0px;
@@ -98,6 +112,16 @@ body {
 /* changed this code */
 .countryDiv {
   color: white;
+  /* padding: 5px; */
+  font-size: 14px;
+}
+.countryDiv a{
+  display: flex;
+  flex-direction: row;
+}
+.countryDiv:hover{
+  border: 1px solid white;
+  border-radius: 2px;
 }
 
 .loginUserDiv {
@@ -107,6 +131,18 @@ body {
   line-height: 17px;
   color: #ffffff;
 }
+.innerLoginUserDiv a{
+  color: white;
+  text-decoration: none;
+}
+.innerLoginUserDiv a:visited{
+  color: white;
+  text-decoration: none;
+}
+.innerLoginUserDiv p{
+  color: white;
+}
+
 .returnAndOrdersDiv {
   font-style: normal;
   font-weight: 400;
@@ -114,7 +150,9 @@ body {
   line-height: 17px;
   color: #ffffff;
 }
-
+.cartLogoDiv{
+  margin-right: 20px;
+}
 .header2 {
   display: flex;
   background: #232f3f;
