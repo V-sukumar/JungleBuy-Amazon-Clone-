@@ -670,7 +670,8 @@ body {
   margin-left: 50px;
 }
 .x{
-  margin-left: 25px;
-  color: #4d627c;
+  padding-left: 25px;
+  margin: 5px;
+  color: #232f3e;
 }
 
