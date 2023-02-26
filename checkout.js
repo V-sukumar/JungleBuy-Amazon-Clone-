@@ -83,3 +83,13 @@ new Vue({
     },
   },
 });
+
+const submitButton = document.querySelector("#submitBtn");
+
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  alert("Your order has been placed. Thank you for shopping!");
+
+  window.location.href = "./index.html";
+});
