@@ -191,7 +191,16 @@ body {
   margin: 0 auto;
 }
 img {
+  width: 100%;
   display: block;
+}
+
+.downarrow {
+  width: 20%;
+}
+
+.downarrow2 {
+  width: 30%;
 }
 
 .img-display {
