@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+
+    #cart{
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+    justify-content: space-between;
+    background-color: #F5F7F7;
+  
+}
+#cartproduct{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1em;
+}
+#productprice{
+   
+    -webkit-text-decoration-line: underline; 
+    text-decoration-line: underline; 
+    width:35%;
+    margin: 10px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    align-items: center;
+}
+#green{
+    color: green;
+    font-weight: 900;
+}
+#pay {
+    width: 90%;
+    margin-top: 5%;
+    border: none;
+    background: none;
+    font-weight: bold;
+    padding: 10px;
+    background-color: orange;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+  }
+
+  #price{
+   font-weight: 500;
+   font-size: 22px;
+   padding-right: 10px;
+  }
+ 
+  .product_d{
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+.product_d > button{
+   background-color: aquamarine;
+   height: 40px;
+   padding-bottom: 5px;
+}
+.product_d >button:hover{
+    background-color: red;
+    cursor: pointer;
+     
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <div id="cart">
+    <div id="cartproduct">
+    
+    </div>
+
+    <div id="productprice">
+        <div>
+            <h3>Bag Total</h3>
+            <h3 id="bag_price"></h3>
+                 
+            
+        </div>
+        <div>
+            <h3>Shipping Charge</h3>
+            <p id="green">Free</p>
+        </div>
+        <div>
+            <h3>Amount Payable</h3>
+            <h3><span> </span> <span id="total"></span></h3>
+        </div>
+        <button id="pay">Proceed to payment</button>
+
+    </div>
+
+</div>
+  
+
+    
+
+  
+
+</body>
+</html>
+<script>
+    let bgp = document.getElementById("bag_price");
+    let totalp = document.getElementById("total");
+
+    let cont = document.getElementById("cartproduct")
+    let cartData = JSON.parse(localStorage.getItem("cartdata")) || [];
+
+    function pricecalc(pdata){
+      let total = 0;
+       for(let i =0 ;i<pdata.length;i++){
+        let x =pdata[i].Price
+      
+          total += x;
+       }
+
+       bgp.innerHTML = `₹ ${total}`;
+       totalp.innerHTML = `₹ ${total}`;
+       
+     
+    }
+    pricecalc(cartData);
+
+      function deleted(key){
+        let products = JSON.parse(localStorage.getItem("cartdata")) || [];
+
+         let d =products.filter((e)=>{
+           return e.key !== key;
+          });
+          console.log(d);
+          localStorage.setItem("cartdata",JSON.stringify(d))
+          let productsFroCart = JSON.parse(localStorage.getItem("cartdata")) || [];
+          showCartProduct(productsFroCart);
+          pricecalc(productsFroCart)
+      }
+function showCartProduct(data){
+    cont.innerHTML = "";
+  data.map((e)=>{
+ console.log(e,"here");
+    let div = document.createElement("div")
+      let image = document.createElement("img");
+      image.src = e.Image
+      let title  = document.createElement("h4");
+       title.innerHTML = `Title- ${e.Title}`;
+      let desc = document.createElement("p");
+       desc.innerHTML = e.Description
+      let price = document.createElement("p");
+       price.innerHTML =`Price- ${e.Price}` ;
+     
+       let button = document.createElement("button");
+       button.innerHTML = "Remove";
+       button.addEventListener("click",function(){
+         alert("this item will be deleted from your cart");
+           deleted(e.key)
+       })
+       div.append(image,title,desc,price,button);
+       div.classList.add("product_d");
+      cont.append(div)
+       
+  })
+}
+showCartProduct(cartData)
+</script>
+  
+

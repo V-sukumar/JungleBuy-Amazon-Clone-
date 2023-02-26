@@ -108,3 +108,18 @@ function show(num){
    }
 }
 
+let sidenav=document.querySelector(".hamburgerLi")
+
+sidenav.addEventListener("click",()=>{
+  document.getElementById("mySidenav").style.width = "400px";
+})
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+  
+
+
+
+

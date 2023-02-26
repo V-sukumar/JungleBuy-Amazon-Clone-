@@ -15,8 +15,9 @@ function fetchProductsData(url) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      productsData = data;
+      productsData=data
       renderPage(currentPage);
+     console.log(data)
     })
     .catch((error) => console.error(error));
 }
@@ -30,6 +31,7 @@ function renderPage(page) {
   let endIndex = startIndex + productsPerPage;
 
   let currentProducts = productsData.slice(startIndex, endIndex);
+    console.log(currentProducts)
 
   currentProducts.forEach((product) => {
     let card = document.createElement("div");
