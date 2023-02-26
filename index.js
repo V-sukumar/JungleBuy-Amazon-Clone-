@@ -1,6 +1,8 @@
 const slides = document.getElementsByClassName("slide");
 
-
+window.addEventListener("load", (event) => {
+  // closeNav();
+});
 const backtop = document.querySelector('.backtop');
 backtop.addEventListener("click",()=>{
   window.scrollTo({
@@ -111,7 +113,7 @@ function show(num){
 let sidenav=document.querySelector(".hamburgerLi")
 
 sidenav.addEventListener("click",()=>{
-  document.getElementById("mySidenav").style.width = "400px";
+  document.getElementById("mySidenav").style.width = "300px";
 })
 
 function closeNav() {
