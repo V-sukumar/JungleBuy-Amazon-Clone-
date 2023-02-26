@@ -48,7 +48,7 @@ function renderPage(page) {
     let anchor = document.createElement("a");
     anchor.href = "productsdetails.html";
     // anchor.appendChild(name);
-    // card.appendChild(anchor);
+    card.appendChild(name);
 
     let description = document.createElement("p");
     description.textContent = product.Description;

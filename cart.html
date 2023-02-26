@@ -1,203 +1,648 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    
+    * {
+      margin: 0;
+      font-family: sans-serif;
+      padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+      list-style: none;
+    }
 
+    body {
+      font-family: "PT Sans", sans-serif;
+    }
+
+    #cart {
+      display: flex;
+      gap: 50px;
+      margin-top: 10px;
+      justify-content: space-between;
+      background-color: #F5F7F7;
+
+    }
+
+    #cartproduct {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+    }
+
+    #productprice {
+
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline;
+      width: 35%;
+      margin: 10px;
+      padding-left: 40px;
+      padding-bottom: 30px;
+      box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+      align-items: center;
+    }
+
+    #green {
+      color: green;
+      font-weight: 900;
+    }
+
+    #pay {
+      width: 90%;
+      margin-top: 5%;
+      border: none;
+      background: none;
+      font-weight: bold;
+      padding: 10px;
+      background-color: orange;
+      font-size: 1.2em;
+      color: white;
+      cursor: pointer;
+    }
+
+    #price {
+      font-weight: 500;
+      font-size: 22px;
+      padding-right: 10px;
+    }
+
+    .product_d {
+      border-radius: 5px;
+
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 4px;
+
+
+
+    }
+
+    .product_d>button {
+      background-color: aquamarine;
+      height: 40px;
+
+      padding-bottom: 5px;
+    }
+
+    .product_d>button:hover {
+      background-color: red;
+      cursor: pointer;
+
+    }
+
+    #cartproduct {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .product_d {
+      height: 60%;
+      width: 200px;
+      padding-top: 70px;
+    }
+
+
+
+
+    /* header css ++++++++++++++++++++ */
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .headerDiv {
+      display: flex;
+      background: #141920;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logoDiv img.logo {
+      width: 100px;
+      /* height: 100%; */
+      margin-left: 15px;
+      /* color: invert; */
+    }
+
+    .logoDiv {
+      padding: 5px;
+    }
+
+    .logoDiv:hover {
+      border: 1px solid white;
+      border-radius: 2px;
+    }
+
+    .leftHeader {
+      display: flex;
+      align-items: center;
+    }
+
+    .leftHeader div {
+      border: 1px solid transparent;
+    }
+
+    /* changed this code */
+    .addressDiv p:first-child {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      color: #cacaca;
+      margin-left: 20px;
+    }
+
+    .addressDiv {
+      padding: 5px;
+    }
+
+    /* changed this code */
+    .addressDiv:hover {
+      border: 1px solid white;
+      border-radius: 2px;
+    }
+
+    .address2 {
+      font-size: 14px;
+      color: white;
+      margin-left: 20px;
+    }
+
+    .middleHeaderSearch {
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      height: 40px;
+    }
+
+    .middleHeaderSearch input {
+      height: 100%;
+      width: 700px;
+      border: none;
+      /* width: 50%; */
+    }
+
+    .allDropdown {
+      display: flex;
+      align-items: center;
+      background-color: #f3f3f3;
+      font-size: 12px;
+      height: 100%;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: none;
+      gap: 3px;
+    }
+
+    .middleHeaderSearch input::placeholder {
+      padding-left: 10px;
+    }
+
+    .searchIconDiv {
+      background: #f4bf76;
+      border-radius: 0px 4px 4px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 40px;
+    }
+
+    /* changed this code */
+    .countryDiv {
+      color: white;
+      /* padding: 5px; */
+      font-size: 14px;
+    }
+
+    .countryDiv a {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .countryDiv:hover {
+      border: 1px solid white;
+      border-radius: 2px;
+    }
+
+    .loginUserDiv {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+    }
+
+    .innerLoginUserDiv a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .innerLoginUserDiv a:visited {
+      color: white;
+      text-decoration: none;
+    }
+
+    .innerLoginUserDiv p {
+      color: white;
+    }
+
+    .returnAndOrdersDiv {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+    }
+
+    .cartLogoDiv {
+      margin-right: 20px;
+    }
+
+    .header2 {
+      display: flex;
+      background: #232f3f;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      height: 38px;
+      display: flex;
+      align-items: center;
+    }
+
+    .headerLinks {
+      display: flex;
+    }
+
+    .headerLinks li {
+      padding: 5px 10px;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      /* flex: none; */
+      order: 1;
+      flex-grow: 0;
+      border: 1px solid transparent;
+    }
+
+    .headerLinks li:hover {
+      border: 1px solid white;
+      border-radius: 2px;
+    }
+
+    .hamburgerLi img {
+      margin-right: 4px;
+    }
+
+    /* header css --------------------- */
+
+
+    /* footer css +++++++++++++++++++++ */
+    /* footer start */
+    .footer {
+      width: 100%;
+      height: 490px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .backtop {
+      text-align: center;
+      height: 50px;
+      background-color: #37475a;
+      padding: 16px;
+    }
+
+    .backtop span {
+      color: white;
+      font-weight: bold;
+    }
+
+    .backtop:hover {
+      background-color: #4d627c;
+    }
+
+    .detail {
+      background-color: #232f3e;
+      height: 350px;
+    }
+
+    .table {
+      margin: 0 150px;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding-top: 50px;
+    }
+
+    .table div {
+      width: 230px;
+    }
+
+    .t-head {
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .table li {
+      color: rgb(223, 221, 221);
+      padding-top: 10px;
+      font-weight: lighter;
+      font-size: 12px;
+      list-style: none;
+    }
+
+    .copy {
+      background-color: #232f3e;
+      height: 90px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .copy span {
+      color: white;
+      font-size: 14px;
+    }
+
+    .line {
+      height: 0.5px;
+      width: 100%;
+      background-color: rgb(172, 172, 172);
+    }
+
+    /* footer end */
+    /* footer css --------------------- */
     #cart{
-    display: flex;
-    gap: 50px;
-    margin-top: 10px;
-    justify-content: space-between;
-    background-color: #F5F7F7;
-  
-}
-#cartproduct{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap:1em;
-}
-#productprice{
-   
-    -webkit-text-decoration-line: underline; 
-    text-decoration-line: underline; 
-    width:35%;
-    margin: 10px;
-    padding-left: 40px;
-    padding-bottom: 30px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    align-items: center;
-}
-#green{
-    color: green;
-    font-weight: 900;
-}
-#pay {
-    width: 90%;
-    margin-top: 5%;
-    border: none;
-    background: none;
-    font-weight: bold;
-    padding: 10px;
-    background-color: orange;
-    font-size: 1.2em;
-    color: white;
-    cursor: pointer;
-  }
-
-  #price{
-   font-weight: 500;
-   font-size: 22px;
-   padding-right: 10px;
-  }
- 
-  .product_d{
-    border-radius: 5px;
-    
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 4px;
-
-
-
-}
-.product_d > button{
-   background-color: aquamarine;
-   height: 40px;
-   
-   padding-bottom: 5px;
-}
-.product_d >button:hover{
-    background-color: red;
-    cursor: pointer;
-     
-}
-#cartproduct{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 14px;
-}
-.product_d{
-  height: 60%;
-  width: 200px;
-  padding-top: 70px;
-}
-
-
-
-
-
-
-
+      margin-top: 60px;
+    }
   </style>
 </head>
+
 <body>
+
+  <nav>
+    <div class="headerDiv">
+      <div class="leftHeader">
+        <div class="logoDiv">
+          <a href="index.html"><img src="./images/webisteLogo.png" alt="logo" class="logo" />
+            <img src="" alt="" class="locationImg" /></a>
+        </div>
+        <div class="addressDiv">
+          <!-- changed name -->
+          <p>Hello</p>
+          <!-- changed name -->
+          <p class="address2">Select your address</p>
+        </div>
+      </div>
+      <div class="middleHeaderSearch">
+        <div class="allDropdown">
+          <p>All</p>
+          <img src="./images/down 1.svg" alt="downArrow" />
+        </div>
+        <input type="text" placeholder="Search JungleBuy.in" />
+        <div class="searchIconDiv">
+          <img src="./images/search 1.svg" alt="searchIcon" />
+        </div>
+      </div>
+      <div class="countryDiv flex">
+        <img src="./images/india 1.svg" alt="india" />
+        <!-- changed name -->
+        <p>EN</p>
+        <img src="./images/down 1.svg" alt="downArrow" />
+      </div>
+      <div class="loginUserDiv flex">
+        <a href="Login.html">
+          <div class="innerLoginUserDiv">
+            <!-- changed name -->
+            <p>Hello, sign in</p>
+            <p>Accounts & Lists</p>
+          </div>
+        </a>
+        <img src="./images/down 1.svg" alt="downArrow" />
+      </div>
+
+      <div class="returnAndOrdersDiv flex">
+        <div class="innerReturn">
+          <p>Returns</p>
+          <p>& Orders</p>
+        </div>
+        <img src="./images/down 1.svg" alt="downArrow" />
+      </div>
+
+      <div class="cartLogoDiv flex">
+        <a href="./cart.html" class="cartLink">
+          <img src="./images/cart.svg" alt="cart" class="cartLogo" />
+          <!-- <p>Cart</p> -->
+        </a>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="header2">
+      <ul class="headerLinks">
+        <li class="hamburgerLi">
+          <img src="./images/hamburger 1.svg" alt="ham" /> All
+        </li>
+        <li>Fashion</li>
+        <li>Mobiles</li>
+        <li>Gift Ideas</li>
+        <li>Prime</li>
+        <li>Amazon Pay</li>
+        <li>Gift Cards</li>
+        <li>Sports,Fitness&Outdoors</li>
+        <li>Computers</li>
+        <li>Customer Service</li>
+        <li>Music</li>
+        <li>Books</li>
+        <li>Registery</li>
+        <li>Amazon Home</li>
+        <li>Pharmacy</li>
+      </ul>
+      <!-- <ul>
+            <li>Shop Black-Owned & Popular Brands</li>
+          </ul> -->
+    </div>
+  </header>
 
   <div id="cart">
     <div id="cartproduct">
-    
+
     </div>
 
     <div id="productprice">
-        <div>
-            <h3>Bag Total</h3>
-            <h3 id="bag_price"></h3>
-                 
-            
-        </div>
-        <div>
-            <h3>Shipping Charge</h3>
-            <p id="green">Free</p>
-        </div>
-        <div>
-            <h3>Amount Payable</h3>
-            <h3><span> </span> <span id="total"></span></h3>
-        </div>
-        <button id="pay">Proceed to payment</button>
+      <div>
+        <h3>Bag Total</h3>
+        <h3 id="bag_price"></h3>
+
+
+      </div>
+      <div>
+        <h3>Shipping Charge</h3>
+        <p id="green">Free</p>
+      </div>
+      <div>
+        <h3>Amount Payable</h3>
+        <h3><span> </span> <span id="total"></span></h3>
+      </div>
+      <button id="pay">Proceed to payment</button>
 
     </div>
 
-</div>
-  
+  </div>
 
-    
 
-  
 
+
+
+  <section class="footer">
+    <div class="backtop">
+      <span>Back to Top</span>
+    </div>
+    <div class="detail">
+      <div class="table">
+        <div>
+          <div class="t-head">Get to Know us</div>
+          <ul>
+            <li>Careers</li>
+            <li>Blog</li>
+            <li>About Amazon</li>
+            <li>Investors Relations</li>
+            <li>Amazon Advices</li>
+            <li>Amazon Science</li>
+          </ul>
+        </div>
+        <div>
+          <div class="t-head">Make Money with Us</div>
+          <ul>
+            <li>Sell products on Amazon</li>
+            <li>Sell on Amazon Business</li>
+            <li>Sell apps on Amazon</li>
+            <li>Become an Affiliate</li>
+            <li>Advertise Your Products</li>
+            <li>Self-Publish with Us</li>
+            <li>Host an Amazon Hub</li>
+          </ul>
+        </div>
+        <div>
+          <div class="t-head">Amazon Payment Products</div>
+          <ul>
+            <li>Amazon Business Card</li>
+            <li>Shop with Points</li>
+            <li>Reload Your Balance</li>
+            <li>Amazon Currency Converter</li>
+          </ul>
+        </div>
+        <div>
+          <div class="t-head">Let Us Help You</div>
+          <ul>
+            <li>Amazon and COVID-19</li>
+            <li>Your Account</li>
+            <li>Your Orders</li>
+            <li>Shipping Rates & Policies</li>
+            <li>Returns & Replacements</li>
+            <li>Manage Your Content and Devices</li>
+            <li>Amazon Assistant</li>
+            <li>Help</li>
+            <a href="adminLogin.html">
+              <li>ADMIN LOGIN</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="copy"></div>
+  </section>
 </body>
+
 </html>
 <script>
-    let bgp = document.getElementById("bag_price");
-    let totalp = document.getElementById("total");
+  let bgp = document.getElementById("bag_price");
+  let totalp = document.getElementById("total");
 
-    let cont = document.getElementById("cartproduct")
-    let cartData = JSON.parse(localStorage.getItem("cartdata")) || [];
+  let cont = document.getElementById("cartproduct")
+  let cartData = JSON.parse(localStorage.getItem("cartdata")) || [];
 
-    function pricecalc(pdata){
-      let total = 0;
-       for(let i =0 ;i<pdata.length;i++){
-        let x =pdata[i].Price
-      
-          total += x;
-       }
+  function pricecalc(pdata) {
+    let total = 0;
+    for (let i = 0; i < pdata.length; i++) {
+      let x = pdata[i].Price
 
-       bgp.innerHTML = `₹ ${total}`;
-       totalp.innerHTML = `₹ ${total}`;
-       
-     
+      total += x;
     }
-    pricecalc(cartData);
 
-      function deleted(key){
-        let products = JSON.parse(localStorage.getItem("cartdata")) || [];
+    bgp.innerHTML = `₹ ${total}`;
+    totalp.innerHTML = `₹ ${total}`;
 
-         let d =products.filter((e)=>{
-           return e.key !== key;
-          });
-          console.log(d);
-          localStorage.setItem("cartdata",JSON.stringify(d))
-          let productsFroCart = JSON.parse(localStorage.getItem("cartdata")) || [];
-          showCartProduct(productsFroCart);
-          pricecalc(productsFroCart)
-      }
-function showCartProduct(data){
+
+  }
+  pricecalc(cartData);
+
+  function deleted(key) {
+    let products = JSON.parse(localStorage.getItem("cartdata")) || [];
+
+    let d = products.filter((e) => {
+      return e.key !== key;
+    });
+    console.log(d);
+    localStorage.setItem("cartdata", JSON.stringify(d))
+    let productsFroCart = JSON.parse(localStorage.getItem("cartdata")) || [];
+    showCartProduct(productsFroCart);
+    pricecalc(productsFroCart)
+  }
+  function showCartProduct(data) {
     cont.innerHTML = "";
-  data.map((e)=>{
- console.log(e,"here");
-    let div = document.createElement("div")
+    data.map((e) => {
+      console.log(e, "here");
+      let div = document.createElement("div")
       let image = document.createElement("img");
       image.src = e.Image
-      let title  = document.createElement("h4");
-       title.innerHTML = `Title- ${e.Title}`;
+      let title = document.createElement("h4");
+      title.innerHTML = `Title- ${e.Title}`;
       let desc = document.createElement("p");
-       desc.innerHTML = e.Description
+      desc.innerHTML = e.Description
       let price = document.createElement("p");
-       price.innerHTML =`Price- ${e.Price}` ;
-     
-       let button = document.createElement("button");
-       button.innerHTML = "Remove";
-       button.addEventListener("click",function(){
-         alert("this item will be deleted from your cart");
-           deleted(e.key)
-       })
-       div.append(image,title,desc,price,button);
-       div.classList.add("product_d");
-      cont.append(div)
-       
-  })
-}
-showCartProduct(cartData)
+      price.innerHTML = `Price- ${e.Price}`;
 
-let checkout=document.getElementById("pay")
-checkout.addEventListener("click",()=>{
-  window.location.href = "checkout.html"
-})
+      let button = document.createElement("button");
+      button.innerHTML = "Remove";
+      button.addEventListener("click", function () {
+        alert("this item will be deleted from your cart");
+        deleted(e.key)
+      })
+      div.append(image, title, desc, price, button);
+      div.classList.add("product_d");
+      cont.append(div)
+
+    })
+  }
+  showCartProduct(cartData)
+
+  let checkout = document.getElementById("pay")
+  checkout.addEventListener("click", () => {
+    window.location.href = "checkout.html"
+  })
 </script>
-  
