@@ -1,8 +1,18 @@
 let loginBtn = document.getElementById("adminLoginBtn");
 let emailInput = document.querySelector("#email");
 let passwordInput = document.querySelector("#password");
-let loginMessage = document.querySelector("#login-message");
-
+let loginMessage = document.querySelector("#login-message")
+let datas=[]
+async function fetchAndRenderusers(){
+  try {
+    let resolved=await fetch(`https://63c822925c0760f69ac60c18.mockapi.io/users`);
+    let data=await resolved.json();
+    datas=data
+  } catch (error) {
+    console.log(error)
+  }
+}
+fetchAndRenderusers()
 loginBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -13,36 +23,17 @@ loginBtn.addEventListener("click", (event) => {
     alert("Fill your email.");
   } else if (password == "") {
     alert("Fill the password.");
-  } else {
-    let obj = {
-      email,
-      password
-    }
-    // console.log(obj)
-    fetch("https://63c812db075b3f3a91d99323.mockapi.io/adminusers", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(obj),
+  } 
+  function signin(datas){
+    datas.forEach((ele)=>{
+      if(ele.email==email && ele.password==password){
+        alert("LOGIN - SUCCESSFUL");
+        window.location.href = "admin.html";
+      }else {
+        alert("Incorrect details")
+        return false
+      }
     })
-      .then((response) => {
-        console.log(response);
-        if (response.ok) {
-          alert("LOGIN - SUCCESSFUL");
-          setTimeout(() => {
-            // window.location.href = "admin.html";
-          }, 500);
-        } else {
-          alert("Failed to login. Please try again.");
-          emailInput.value = "";
-          passwordInput.value = "";
-        }
-      })
-      .catch((error) => {
-        alert("Failed to login. Please try again. API Error occured");
-        emailInput.value = "";
-        passwordInput.value = "";
-      });
   }
+  signin(datas)
 });
