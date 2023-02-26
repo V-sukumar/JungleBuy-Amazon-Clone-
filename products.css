@@ -16,7 +16,7 @@
   display: flex;
   background: #141920;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,33 +28,51 @@
   margin-left: 15px;
   /* color: invert; */
 }
-
+.logoDiv{
+  padding: 5px;
+}
+.logoDiv:hover{
+  border: 1px solid white;
+  border-radius: 2px;
+}
 .leftHeader {
   display: flex;
   align-items: center;
 }
-
-.addressDiv {
-  /* font-family: " EAmazonmber"; */
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  color: #ffffff;
-  margin-left: 20px;
+.leftHeader div {
+  border: 1px solid transparent;
 }
 
+/* changed this code */
+.addressDiv p:first-child {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #cacaca;
+  margin-left: 20px;
+}
+.addressDiv{
+  padding: 5px;
+}
+/* changed this code */
+.addressDiv:hover{
+  border: 1px solid white;
+  border-radius: 2px;
+}
 .address2 {
   font-size: 14px;
+  color: white;
+  margin-left: 20px;
 }
 .middleHeaderSearch {
   border-radius: 20px;
   display: flex;
   align-items: center;
-  height: 30px;
+  height: 40px;
 }
 .middleHeaderSearch input {
-  height: 30px;
+  height: 100%;
   width: 700px;
   border: none;
   /* width: 50%; */
@@ -74,37 +92,68 @@
   border: none;
   gap: 3px;
 }
+.middleHeaderSearch input::placeholder{
+  padding-left: 10px;
+}
 .searchIconDiv {
   background: #f4bf76;
   border-radius: 0px 4px 4px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
+  height: 100%;
   width: 40px;
 }
-.loginUserDiv {
-  /* font-family: "Amazon Ember"; */
-  font-style: normal;
-  font-weight: 400;
+
+/* changed this code */
+.countryDiv {
+  color: white;
+  /* padding: 5px; */
   font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
 }
-.returnAndOrdersDiv {
-  /* font-family: "Amazon Ember"; */
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #ffffff;
+.countryDiv a{
+  display: flex;
+  flex-direction: row;
+}
+.countryDiv:hover{
+  border: 1px solid white;
+  border-radius: 2px;
 }
 
+.loginUserDiv {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+.innerLoginUserDiv a{
+  color: white;
+  text-decoration: none;
+}
+.innerLoginUserDiv a:visited{
+  color: white;
+  text-decoration: none;
+}
+.innerLoginUserDiv p{
+  color: white;
+}
+
+.returnAndOrdersDiv {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+.cartLogoDiv{
+  margin-right: 20px;
+}
 .header2 {
   display: flex;
   background: #232f3f;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 30px;
+  height: 38px;
   display: flex;
   align-items: center;
 }
@@ -113,7 +162,7 @@
 }
 .headerLinks li {
   padding: 5px 10px;
-  /* font-family: "Amazon Ember"; */
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -124,6 +173,11 @@
   /* flex: none; */
   order: 1;
   flex-grow: 0;
+  border: 1px solid transparent;
+}
+.headerLinks li:hover {
+  border: 1px solid white;
+  border-radius: 2px;
 }
 .hamburgerLi img {
   margin-right: 4px;
@@ -492,6 +546,7 @@ input[type="checkbox"]:hover {
 
 /* footer start */
 
+/* footer start */
 .footer {
   width: 100%;
   height: 490px;
@@ -543,7 +598,7 @@ input[type="checkbox"]:hover {
   color: rgb(223, 221, 221);
   padding-top: 10px;
   font-weight: lighter;
-  font-size: 14px;
+  font-size: 12px;
   list-style: none;
 }
 
@@ -565,4 +620,5 @@ input[type="checkbox"]:hover {
   background-color: rgb(172, 172, 172);
 }
 
+/* footer end */
 /* footer end */
