@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
 body {
-  background: #ccb6fb;
+  background: url("https://m.media-amazon.com/images/G/01/credit/PLCC/CardArt/PLCC_MAPLE_Core_card_500x315._CB627897952_.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
 }
@@ -15,7 +18,7 @@ body {
 .wrapper {
   min-height: 100vh;
   display: flex;
-  padding: 50px 15px;
+  /* padding: 50px 15px; */
 }
 @media screen and (max-width: 700px), (max-height: 500px) {
   .wrapper {
@@ -27,6 +30,9 @@ body {
 .card-form {
   max-width: 570px;
   margin: auto;
+  left: 15%;
+  top: 1%;
+  position: absolute;
   width: 100%;
 }
 @media screen and (max-width: 576px) {
