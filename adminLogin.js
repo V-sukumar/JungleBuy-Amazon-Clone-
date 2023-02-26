@@ -25,15 +25,19 @@ loginBtn.addEventListener("click", (event) => {
     alert("Fill the password.");
   } 
   function signin(datas){
+    let flag = false;
     datas.forEach((ele)=>{
       if(ele.email==email && ele.password==password){
+        flag =true;
         alert("LOGIN - SUCCESSFUL");
         window.location.href = "admin.html";
-      }else {
-        alert("Incorrect details")
-        return false
+        return
       }
     })
+    if(!flag) {
+      alert("Incorrect details")
+      return false
+    }
   }
   signin(datas)
 });

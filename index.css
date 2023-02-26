@@ -635,12 +635,12 @@ body {
     }
 } */
 
-#mySidenav{
+/* #mySidenav{
   width: 300px;
-}
+} */
 
 .sidenav {
-  width: 300px;
+  /* width: 300px; */
   height: 100%;
   width: 0;
   position: fixed;
