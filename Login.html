@@ -208,14 +208,19 @@
                 return false
             }
             function signin(data){
-                data.forEach((el,i)=>{
-                    if(el.email==email && el.password==password){
-                        alert("Sign in Successful");
-                        window.location.href="./index.html"
-                    }else{
-                        alert("Incorrect Data");
-                    }
-                });
+                let flag = false;
+                data.forEach((ele)=>{
+                if(ele.email==email && ele.password==password){
+                    flag =true;
+                    alert("LOGIN - SUCCESSFUL");
+                    window.location.href = "index.html";
+                    return
+                }
+                })
+                if(!flag) {
+                    alert("Wrong Email or Password")
+                    return false
+                }
             }
             signin(data)
         }) 
