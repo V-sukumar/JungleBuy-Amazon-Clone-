@@ -63,18 +63,31 @@
     text-align: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 4px;
+
 
 
 }
 .product_d > button{
    background-color: aquamarine;
    height: 40px;
+   
    padding-bottom: 5px;
 }
 .product_d >button:hover{
     background-color: red;
     cursor: pointer;
      
+}
+#cartproduct{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+}
+.product_d{
+  height: 60%;
+  width: 200px;
+  padding-top: 70px;
 }
 
 
@@ -181,6 +194,11 @@ function showCartProduct(data){
   })
 }
 showCartProduct(cartData)
+
+let checkout=document.getElementById("pay")
+checkout.addEventListener("click",()=>{
+  window.location.href = "checkout.html"
+})
 </script>
   
 

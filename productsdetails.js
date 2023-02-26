@@ -56,7 +56,7 @@ cart.addEventListener("click", () => {
   console.log(cartdata)
 
   console.log(d)
-  window.location.href = "cart.html";
+  alert("Your Product Added To Cart")
 
 })
 
