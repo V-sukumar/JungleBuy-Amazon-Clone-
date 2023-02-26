@@ -47,8 +47,8 @@ function renderPage(page) {
     name.classList.add("product-title");
     let anchor = document.createElement("a");
     anchor.href = "productsdetails.html";
-    anchor.appendChild(name);
-    card.appendChild(anchor);
+    // anchor.appendChild(name);
+    // card.appendChild(anchor);
 
     let description = document.createElement("p");
     description.textContent = product.Description;
@@ -75,8 +75,9 @@ function renderPage(page) {
     price.textContent = `₹${product.Price}` + `(20% off)`;
     card.appendChild(price);
     // card.appendChild(originalP);
+    anchor.appendChild(card);
 
-    productsContainer.appendChild(card);
+    productsContainer.appendChild(anchor);
   });
 
   currentPage = page;
