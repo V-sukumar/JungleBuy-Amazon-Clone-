@@ -231,19 +231,16 @@ body {
 }
 
 .product-comp {
-  /* width: 100%;
-  height: 100%; */
+  
   display: flex;
   margin-top: 20px;
   gap: 20px;
-  /* box-sizing: border-box;
-  margin: 20px 0;
-  justify-content: space-around; */
+  
 }
 
 .product-comp .box {
   width: 25%;
-  /* height: 400px; */
+  
   background-color: white;
   padding: 10px;
 }
@@ -266,19 +263,21 @@ body {
 .box-a {
   overflow: hidden;
   background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 .box div img {
   width: 150px;
-  /* height: 120px; */
+  
   cursor: pointer;
-  /* margin-left: -20px; */
-  /* margin-right: 0px; */
+  
 }
 
 .box-a div {
   display: inline-block;
-  /* width: 50%; */
+
+  
 }
 
 .box-a div span {
@@ -295,7 +294,7 @@ body {
   align-items: center;
   background-color: white;
   justify-content: space-between;
-  /* width: 25%; */
+  
 }
 
 .box-b .best {
@@ -325,7 +324,7 @@ body {
   margin: 0px 20px;
   width: 275px;
   cursor: pointer;
-  /* height: 280px; */
+
 }
 
 .slide img {
@@ -365,7 +364,7 @@ body {
   }
 }
 .slider {
-  /* overflow: hidden; */
+  
   width: 100%;
   overflow: hidden;
   position: relative;
